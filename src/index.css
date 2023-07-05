@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap');
+
+:root {
+    --main: #FFF;
+    --secondary: #EEE;
+    --extra: #DDD;
+    --color: #000;
+    --hover: #4f4f4f;
+}
+
+[data-theme='dark'] {
+    --main: #000;
+    --secondary: #343434;
+    --extra: #444;
+    --color: #FFF;
+    --hover: #dddddd;
+}
+
+* {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+html,
+body {
+    background-color: var(--secondary);
+    color: var(--color);
+}
+
+.navigationBar {
+    background-color: var(--main) !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.brandName {
+    padding: 10px;
+}
+
+.brandName i {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #990404;
+}
+
+.brnadText {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color);
+    position: relative;
+    bottom: 5px;
+}
+
+.mainContent {
+    margin: 115px 15px 30px 15px;
+}
+
+.taskDisplaySection,
+.summaryDisplaySection {
+    background-color: var(--extra);
+    color: var(--color);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.taskWrapper {
+    background-color: var(--main);
+    border-radius: 8px;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+    position: relative;
+    border-left: 5px solid #810000;
+}
+
+.completedTaskWrapper {
+    background-color: var(--main);
+    border-radius: 8px;
+    padding: 20px 20px;
+    margin-bottom: 15px;
+    position: relative;
+    border-left: 5px solid #10a63b;
+}
+
+.taskNumberStatus {
+    position: relative;
+}
+
+.taskNumberStatus p {
+    margin-bottom: 0px;
+    position: absolute;
+    left: 0px;
+}
+
+.taskNumber {
+    margin-right: 10px;
+    background-color: var(--extra);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2px 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.taskStatus {
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+.taskStatusIndicator {
+    font-size: 50px;
+    margin-bottom: 0px;
+    color: #990404;
+}
+
+.taskName {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.taskName input {
+    background-color: var(--secondary);
+    border: 1px solid #737373;
+    border-radius: 0px !important;
+    cursor: pointer;
+}
+
+.strikeText label {
+    text-decoration: line-through;
+}
+
+.addNewTask {
+    float: right;
+    font-size: 18px;
+    color: var(--color);
+    padding: 4px 0px;
+}
+
+.addNewTask i {
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+}
+
+.addNewTask:hover {
+    cursor: pointer;
+    color: var(--hover);
+}
+
+.deleteButton {
+    width: 30px;
+    height: 30px;
+    background-color: #800000;
+    padding: 4px 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    text-align: center;
+    color: #FFF;
+}
+
+.searchInput {
+    margin-bottom: 20px;
+}
+
+.summaryIcon {
+    font-size: 32px;
+    margin-right: 20px;
+}
+
+.all {
+    color: #9f4b00;
+}
+
+.completed {
+    color: #10a63b;
+}
+
+.pending {
+    color: #a8a8a8;
+}
+
+.summaryTxt {
+    margin-bottom: 10px 0px;
+    border-bottom: 1px solid #5d5d5d;
+}
+
+.summaryTxt:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+.summaryTxt span {
+    font-size: 18px;
+    position: relative;
+    bottom: 6px;
+}
+
+.summaryTxt span:last-child {
+    float: right;
+    top: 10px;
+}
+
+.themeLight {
+    color: var(--color);
+    font-size: 1.5rem;
+    padding: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .mainContent {
+        margin: 115px 0px 30px 0px;
+    }
+
+    .taskName {
+        font-size: 14px;
+    }
+
+    .hideOnXs {
+        display: none;
+    }
+}
