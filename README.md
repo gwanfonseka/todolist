@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Responsive Design
 - A summary of tasks avilable for large screens
-- A theme (dark/ligh) has been provided for users to choose
+- A theme (dark/light) has been provided for users to choose
 
 ## Available Scripts
 
