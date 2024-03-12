@@ -73,6 +73,12 @@ body {
     border-left: 5px solid #810000;
 }
 
+.taskList {
+    height: 768px;
+    overflow-y: scroll ;
+    padding: 0px 10px 0px 0px;
+}
+
 .completedTaskWrapper {
     background-color: var(--main);
     border-radius: 8px;
