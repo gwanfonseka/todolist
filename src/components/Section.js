@@ -1,28 +1,34 @@
 import { useSelector, useDispatch } from 'react-redux'
+import styled from 'styled-components'
 import { Form } from 'react-bootstrap'
 import taskServices from '../services/taskServices'
 import { setTasks } from '../reducers/taskReducer'
 import Search from './Search'
 
-const Task = () => {
+const SectionHeader = styled.h3`
+    font-size: 20px;
+`;
+
+const Section = ({title, _tasks, category}) => {
     const dispatch = useDispatch()
     const originalTaskList = useSelector(state => state.tasks)
 
     // filter tasks
     const tasks = useSelector(({ tasks, search }) => {
-        if (search === '') {
-            return [...tasks]
-        }
-        else {
-            let searchResult = []
-            tasks.forEach(task => {
-                let bool = task.title.toLowerCase().includes(search)
-                if (bool === true) {
-                    searchResult.push(task)
-                }
-            })
-            return searchResult
-        }
+        return tasks
+        // if (search === '') {
+        //     return [...tasks]
+        // }
+        // else {
+        //     let searchResult = []
+        //     tasks.forEach(task => {
+        //         let bool = task.title.toLowerCase().includes(search)
+        //         if (bool === true) {
+        //             searchResult.push(task)
+        //         }
+        //     })
+        //     return searchResult
+        // }
     })
 
     // generate new task
@@ -57,10 +63,11 @@ const Task = () => {
 
     return (
         <div className="taskDisplaySection">
-            <h3>Tasks <span className="addNewTask" onClick={() => handleNewTask()}>Add new <i className="bi bi-plus-square"></i></span></h3>
-            <Search />
+            {/* <h3>Tasks <span className="addNewTask" onClick={() => handleNewTask()}>Add new <i className="bi bi-plus-square"></i></span></h3>
+            <Search /> */}
+            <SectionHeader>{title}</SectionHeader>
             {tasks.length === 0 ?
-                <p>No tasks available</p> :
+                <div className="taskList">No tasks available</div> :
                 <div className="taskList">
                     {tasks.map(task => {
                         return (
@@ -84,4 +91,4 @@ const Task = () => {
     )
 }
 
-export default Task
+export default Section

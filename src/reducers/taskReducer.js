@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const taskSlice = createSlice({
     name: 'tasks',
-    initialState: [{ no: 12121, title: 'Create todo list', status: false }],
+    initialState: [],
     reducers: {
         setTasks(state, action) {
             return action.payload
