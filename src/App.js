@@ -1,4 +1,4 @@
-import { Row, Col } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import Nav from './components/Nav'
 import Board from './components/Board'
 

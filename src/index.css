@@ -64,38 +64,10 @@ body {
     border-radius: 10px;
 }
 
-.taskWrapper {
-    background-color: var(--main);
-    border-radius: 8px;
-    padding: 20px 20px;
-    margin-bottom: 15px;
-    position: relative;
-    border-left: 5px solid #810000;
-}
-
 .taskList {
     height: 768px;
     overflow-y: auto;
     padding: 0px 10px 0px 0px;
-}
-
-.completedTaskWrapper {
-    background-color: var(--main);
-    border-radius: 8px;
-    padding: 20px 20px;
-    margin-bottom: 15px;
-    position: relative;
-    border-left: 5px solid #10a63b;
-}
-
-.taskNumberStatus {
-    position: relative;
-}
-
-.taskNumberStatus p {
-    margin-bottom: 0px;
-    position: absolute;
-    left: 0px;
 }
 
 .taskNumber {
@@ -118,21 +90,6 @@ body {
     margin-bottom: 0px;
     color: #990404;
 }
-
-.taskName {
-    margin-top: 40px;
-    margin-bottom: 0px;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
-
-.taskName input {
-    background-color: var(--secondary);
-    border: 1px solid #737373;
-    border-radius: 0px !important;
-    cursor: pointer;
-}
-
 .strikeText label {
     text-decoration: line-through;
 }
@@ -161,9 +118,6 @@ body {
     background-color: #800000;
     padding: 4px 4px;
     border-radius: 50%;
-    position: absolute;
-    top: 18px;
-    right: 15px;
     text-align: center;
     color: #FFF;
 }
@@ -269,10 +223,6 @@ body {
 @media (max-width: 576px) {
     .mainContent {
         margin: 115px 0px 30px 0px;
-    }
-
-    .taskName {
-        font-size: 14px;
     }
 
     .hideOnXs {
